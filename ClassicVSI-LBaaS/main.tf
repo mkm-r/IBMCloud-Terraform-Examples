@@ -2,6 +2,7 @@ module instance {
   source     = "./instance"
   datacenter = var.datacenter
   ssh_key    = var.ssh_key
+  instance_count = var.instance_count
 }
 
 module lbaas {
