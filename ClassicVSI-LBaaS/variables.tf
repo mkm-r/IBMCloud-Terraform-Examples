@@ -24,7 +24,7 @@ variable datacenter {
 
 variable "instance_count" {
   description = "Number of instances"
-  type = int
+  type = number
 }
 
 
