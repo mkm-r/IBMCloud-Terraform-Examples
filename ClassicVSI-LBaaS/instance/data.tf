@@ -1,6 +1,3 @@
-data "ibm_compute_ssh_key" "ssh_key" {
-  label = var.ssh_key
-}
 
 data "ibm_security_group" "allow_http" {
   name = "allow_http"
