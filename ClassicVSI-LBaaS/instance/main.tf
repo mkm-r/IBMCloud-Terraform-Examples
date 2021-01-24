@@ -7,9 +7,9 @@ resource ibm_compute_vm_instance instance {
   flavor_key_name            = var.instance_size
   network_speed              = 1000
   hourly_billing             = true
-  private_network_only       = true
+  private_network_only       = false
   local_disk                 = true
-  ssh_key_ids                = [data.ibm_compute_ssh_key.ssh_key.id]
+  #ssh_key_ids                = [data.ibm_compute_ssh_key.ssh_key.id]
   tags                       = ["terraform", "web-servers"]
   user_metadata              = file("${path.module}/install.sh")
   private_security_group_ids = [data.ibm_security_group.allow_http.id, data.ibm_security_group.allow_outbound.id, data.ibm_security_group.allow_ssh.id]
