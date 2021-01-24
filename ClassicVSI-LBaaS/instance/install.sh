@@ -1,5 +1,8 @@
 #!/usr/bin/env bash 
 
+curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a 19843ddf-5f34-4923-b872-7ea3b5a10f0c -c ingest.private.us-south.monitoring.cloud.ibm.com --collector_port 6443 --secure true -ac "sysdig_capture_enabled: false"
+
+
 ## Update machine
 DEBIAN_FRONTEND=noninteractive apt -qqy update
 DEBIAN_FRONTEND=noninteractive apt-get -qqy -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold' upgrade
