@@ -4,8 +4,7 @@
 
 # Ankush SysDig
 
-curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a 0e286406-a796-4490-a8b1-ce9bd11ead20 -c ingest.private.us-south.monitoring.cloud.ibm.com --collector_port 6443 --secure true -ac "sysdig_capture_enabled: false"
-
+curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a 230d20be-ac51-4f9a-8efb-0a71aa1b2ccb -c ingest.us-east.monitoring.cloud.ibm.com --collector_port 6443 --secure true -ac "sysdig_capture_enabled: false"
 
 ## Update machine
 DEBIAN_FRONTEND=noninteractive apt -qqy update
